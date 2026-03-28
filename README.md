@@ -3,7 +3,7 @@
 A high-performance, bilingual Single Page Application (SPA) designed to help Malaysian citizens navigate the 2026 targeted subsidy framework. This tool provides real-time financial forecasting for RON95 fuel quotas and features an integrated AI advisor for policy guidance.
 
 ## 🚀 Live Demo
-**Check out the live application here:** [[INSERT YOUR NETLIFY LINK HERE]](https://69c811d87ba84a929e4058ab--budi-forecaster.netlify.app/)
+**Check out the live application here:** https://69c811d87ba84a929e4058ab--budi-forecaster.netlify.app/
 
 ---
 
