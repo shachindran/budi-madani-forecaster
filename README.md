@@ -1,40 +1,54 @@
-# 📊 BUDI MADANI AI Forecaster (Native Web App)
+# BUDI MADANI Forecaster
 
-A high-performance, bilingual Single Page Application (SPA) designed to help Malaysian citizens navigate the 2026 targeted subsidy framework. This tool provides real-time financial forecasting for RON95 fuel quotas and features an integrated AI advisor for policy guidance.
+**Independent RON95 consumption and cost scenario calculator for Malaysia.**
 
-## 🚀 Live Demo
-**Check out the live application here:** https://69c811d87ba84a929e4058ab--budi-forecaster.netlify.app/
+A multilingual, browser-based experiment that estimates fuel consumption and illustrative expenditure from driving distance and vehicle efficiency. This is not an official government service and does not determine eligibility or retrieve live prices.
+
+## 01 / Overview
+
+| | |
+| :--- | :--- |
+| **Purpose** | Illustrative monthly RON95 consumption and expenditure |
+| **Platform** | Static single-page application |
+| **Languages** | English, Bahasa Melayu, Mandarin, Tamil |
+| **Stack** | HTML, vanilla JavaScript, Tailwind CSS, Chart.js |
+| **Data** | User inputs and fixed reference assumptions |
+| **Status** | Independent, experimental |
+
+## 02 / Method
+
+The calculator estimates daily consumption as distance (km) divided by efficiency (km/L). It multiplies daily consumption by 30 to estimate monthly fuel use, then calculates example spending using the reference subsidy allowance. A chart compares cumulative use with that allowance.
+
+## 03 / Policy assumptions
+
+| Parameter | Value | Note |
+| :--- | ---: | :--- |
+| Basic BUDI95 allowance | 300 L/month | Restored effective 1 September 2026; eligibility applies |
+| Subsidised RON95 price | RM1.99/L | Ministry of Finance figure |
+| Unsubsidised reference price | RM3.87/L | Example only, **not a live quote** |
+| Forecast horizon | 30 days | Constant daily travel assumption |
+
+**Policy source:** [Ministry of Finance announcement, 31 August 2026](https://www.mof.gov.my/portal/ms/berita/siaran-media/had-kelayakan-asas-bulanan-budi-madani-dinaikkan-semula-kepada-300-liter-mulai-1-september-2026).
+
+The application does not check your actual quota, eligibility, prior purchases, or current pump price. Always confirm official requirements and prices before using an estimate for a financial decision.
+
+## 04 / Features
+
+- Four-language interface with immediate language switching
+- Estimated 30-day consumption and cost based on user-supplied driving assumptions
+- Chart.js visualisation of cumulative use against the basic reference allowance
+- Static frontend without a backend or account system
+
+## 05 / Running locally
+
+Download or clone the repository and open `index.html` in a modern browser. An internet connection is needed to load the Tailwind CSS, Chart.js and font resources referenced in the page.
+
+The earlier prototype AI advisor has been removed from the public version. It used a browser-side API key placeholder and inserted untrusted chat text into HTML. A safe future integration would require a protected backend, safe rendering, and maintained policy sources.
+
+## 06 / Limitations
+
+This is an educational modelling tool, not a production subsidy service. It assumes a 30-day period, constant daily driving and an example market price. It does not track actual purchases or verify eligibility. The calculator does not fetch government records or a live pricing feed.
 
 ---
 
-## ✨ Key Features
-
-### ⛽ Predictive Fuel Engine
-* **Real-Time Calculations:** Instantly forecasts monthly fuel expenditure and "Days Until Cliff" (quota exhaustion) based on user driving habits.
-* **Dynamic Visualization:** Integrated **Chart.js** to provide an animated 30-day burn rate projection against the government's 200L subsidy limit.
-* **Market Penalty Alerts:** Automated UI state changes that highlight financial exposure when users exceed their allocated quota.
-
-### 🤖 Gemini AI Advisor
-* **REST API Integration:** Connected to **Google Gemini** to provide a context-aware financial assistant.
-* **Policy Guidance:** Trained to answer complex queries regarding PADU, STR/SARA eligibility, and 2026 fuel regulations.
-
-### 🌍 Global Accessibility (i18n)
-* **Instant Translation:** A custom-built JavaScript i18n engine allowing seamless UI switching between **English, Bahasa Melayu, Mandarin, and Tamil** with zero page reloads.
-* **Localization:** All dynamic math warnings and AI responses are tailored to the selected language.
-
----
-
-## 🛠️ Technical Stack
-* **Frontend:** HTML5, Tailwind CSS (Utility-first styling)
-* **Engine:** Vanilla JavaScript (ES6+)
-* **Graphics:** Chart.js (Data Visualization)
-* **AI:** Google Gemini API (Natural Language Processing)
-* **Deployment:** Netlify (CI/CD)
-
----
-
-## 📂 Project Structure
-```text
-BUDI-Pro/
-├── index.html        # The entire SPA (Structure, Logic, and Styles)
-└── README.md         # Project Documentation
+**Independent project. Not affiliated with or endorsed by the Ministry of Finance or the BUDI MADANI programme.**
